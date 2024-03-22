@@ -145,4 +145,26 @@ public record Fecha(Integer año,
                 return nombreDias + ", " + this.dia() + " de " + nombreMes + " de " + this.año();
         }
 
+
+
+
+//defensa ejercicio D 
+
+public Fecha RestarDiasFechaDada(Integer n) {
+    Integer nuevoDia = this.dia() - n;
+Integer nuevoMes = this.mes();
+Integer nuevoAño = this.año();
+
+
+while (nuevoDia <= 0) {
+nuevoMes--;
+if (nuevoMes <= 0) {
+    nuevoMes = 12;
+    nuevoAño--;
+   
+nuevoDia += diasEnMes(nuevoAño, nuevoMes);
 }
+    return Fecha.of(nuevoAño, nuevoMes, nuevoDia);}
+}
+
+

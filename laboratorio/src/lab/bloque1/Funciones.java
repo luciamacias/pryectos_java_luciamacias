@@ -78,4 +78,43 @@ public class Funciones {
                 return masLarga;
         }
 
+
+
+
+
+
+
+
+
+//defensa ejercicio B 
+
+public static Double NumeroCombinatorioDefensa(Integer n, Integer k) {
+    Preconditions.checkArgument(n>=k, String.format("El valor n (%d) debe ser mayor que k (%d)", n,k));
+    Double denominador = Funciones.factorial(n);
+    Double divisor = Funciones.factorial(k)*(Funciones.factorial(k+1));
+    return denominador/divisor; }
+
+
+
+//defensa ejercicio C
+
+public static Double CalculoNumerosDefensa(Integer n, Integer k) {
+    Preconditions.checkArgument(n>=k,String.format("El valor n (%d) debe ser mayor o igual que k (%d)",n,k));
+    Double fueraSumatorio = Funciones.factorial(k)/(Funciones.factorial(k+2));
+    Double sumatorio =0. ;
+    for(Integer i=0;i<=k;i++) {
+            Double primero = Math.pow(-1, i);
+            Double segundo = Funciones.numeroCombinatorio(k, i);
+            Double tercero = Math.pow((k-i), n);
+            sumatorio += primero * segundo * tercero;
+            }
+    return fueraSumatorio*sumatorio;}
+
+//defensa ejercicio A
+
+
 }
+
+
+
+

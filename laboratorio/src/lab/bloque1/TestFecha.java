@@ -37,4 +37,14 @@ public class TestFecha {
        boolean esBisiesto = Fecha.esAñoBisiesto(2024);
        System.out.println("2024 es bisiesto: " + esBisiesto);
    }
+
+
+//test de la defensa ejercicio D
+  
+public static void main(String[] args) {
+   Fecha fecha1 = Fecha.of(2022, 8, 15);
+   System.out.println("Fecha 1: " + fecha1);
+   Fecha fecha4 = fecha1.restarDias(3);
+   System.out.println("Fecha 4 (restando 3 dias a la Fecha 1): " + fecha4);}
 }
+
